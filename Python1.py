@@ -51,3 +51,37 @@ function2(35,67, car=23, bus=12)
 
 m = lambda n,o : n+o
 print(m(2,4))
+
+
+#output
+'''
+bcde
+cdef
+abcdefabcdef
+bd
+['a', 'b', 'c']
+('John', 742, 43.01)
+John
+dict_keys(['name', 'no', 'score'])
+dict_values(['John', 742, 43.01])
+true
+100
+101
+102
+103
+104
+105
+P
+y
+t
+h
+o
+n
+string
+30
+60
+70
+(35, 67)
+{'car': 23, 'bus': 12}
+6
+'''
