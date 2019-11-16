@@ -1,0 +1,108 @@
+
+class A {
+	public int no;
+	public String name;
+	public A ()
+	{
+		System.out.println("this is A class, there is no Param.");
+		this.no = 0;
+		this.name = "Hello";
+	}
+	public A (int no, String name)
+	{
+		this.no = no;
+		this.name = name;
+	}
+	
+	public void function()
+	{
+		System.out.println("this is a function!");
+	}
+}
+
+class B extends A {
+	@Override
+	public void function()
+	{
+		System.out.println("this is a override function!");
+	}
+}
+
+abstract class C {
+	public String name = "abc";
+	public int no = 0;
+	public void printme(String something)
+	{
+		System.out.println(something);
+	}
+	public abstract void printSomething();
+	public C(int no,String name)
+	{
+		this.no = no;
+		this.name = name;
+	}
+}
+
+class D extends C {
+	public D (int no,String name)
+	{
+		super(no, name);
+	}
+	public void printSomething()
+	{
+		System.out.println("something");
+	}
+	public void setNo(int no)
+	{
+		this.no = no;
+	}
+}
+
+interface E {
+	public void functionA();
+	public void functionB();
+}
+
+interface F {
+	public void functionC();
+}
+
+class G implements E,F {
+	@Override
+	public void functionA() {
+		System.out.println("this is functionA");
+	}
+
+	@Override
+	public void functionB() {
+		System.out.println("this is functionB");
+	}
+	
+	@Override
+	public void functionC() {
+		System.out.println("this is functionC");
+	}
+}
+
+
+public class hello {
+	
+	public static void main(String arg[])
+	{
+		System.out.println("Hello!");
+		
+		A a = new A(50, "John");
+		System.out.println(a.no);
+		
+		B b = new B();
+		b.function();
+		
+		D d = new D(1, "John");
+		d.printme("something is D");
+		d.printSomething();
+		
+		G g = new G();
+		g.functionA();
+	}
+
+}
